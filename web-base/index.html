@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WebBase from Qa Ninja</title>
+        <script src="js/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+
+            <h1>Cadastro de alunos</h1>
+
+            <form>
+                <label for="nomeCompleto">Nome Completo</label>
+                <input name="nomeCompleto" type="text">
+
+                <label for="email">E-mail</label>
+                <input name="email" type="text">
+
+                <label for="Nota">Nota</label>
+                <input name="nota" type="text"> 
+
+                <input type="button" value="Cadastrar">
+            </form>
+
+            <div>
+                <table class="table">
+                    <thead>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Nota</th>
+                    </thead>
+                    <tbody>
+                        <tr v-for="aluno in alunos">
+                            <td>{{aluno.nome}}</td>
+                            <td>{{aluno.email}}</td>
+                            <td>{{aluno.nota}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <script>
+            var app = new Vue({
+                el:"#app",
+                data: {
+                    alunos: [
+                        { nome: 'Anderson Oliveira', email: 'adn@gmail.com', nota: 10 },
+                        { nome: 'Camila Amorim', email: 'camila.oliveira@gmail.com', nota: 10 }
+                    ]
+                }
+            })
+        </script>
+        <style>
+            .table{
+                margin-top: 20px;
+                width: 100%;
+                text-align: left;
+            }
+            .table th, .table td{
+                border-top: 1px solid rgb(204, 204, 204);
+            }
+        </style>
+    </body>
+</html>
