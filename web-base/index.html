@@ -11,15 +11,15 @@
 
             <form>
                 <label for="nomeCompleto">Nome Completo</label>
-                <input name="nomeCompleto" type="text">
+                <input name="nomeCompleto" type="text" v-model="form.nome">
 
                 <label for="email">E-mail</label>
-                <input name="email" type="text">
+                <input name="email" type="text" v-model="form.email">
 
                 <label for="Nota">Nota</label>
-                <input name="nota" type="text"> 
+                <input name="nota" type="text" v-model="form.nota"> 
 
-                <input type="button" value="Cadastrar">
+                <input type="button" value="Cadastrar" @click="adicionarContato">
             </form>
 
             <div>
@@ -44,13 +44,30 @@
             var app = new Vue({
                 el:"#app",
                 data: {
-                    alunos: [
-                        { nome: 'Anderson Oliveira', email: 'adn@gmail.com', nota: 10 },
-                        { nome: 'Camila Amorim', email: 'camila.oliveira@gmail.com', nota: 10 }
-                    ]
+                    form: {
+                        nome: '',
+                        email: '',
+                        nota:  ''
+                    },
+                    alunos: []
+                },
+                methods: {
+                    limpaFormulario: function(){
+                        this.form = {
+                                nome: '',
+                                email: '',
+                                nota: ''
+                        }
+                    },
+                    adicionarContato: function(){
+                        //console.log(this.form)
+                        this.alunos.push(this.form)
+                        this.limpaFormulario()
+                    }
                 }
             })
         </script>
+
         <style>
             .table{
                 margin-top: 20px;
@@ -60,6 +77,15 @@
             .table th, .table td{
                 border-top: 1px solid rgb(204, 204, 204);
             }
-        </style>
+            input {
+                display: block;
+        }
+        input[type=button]{
+            margin-top: 10px;
+            background-color:#3F51B5;
+            border-color: #3F51B5;
+            color: #eee
+        }
+        </style>  
     </body>
 </html>
