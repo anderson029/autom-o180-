@@ -7,12 +7,10 @@ Quando('submeto o meu cadastro completo') do
     find("#email").set "anderson.tr@gmail.com"
     find("#password").set "senha123"
     click_button "Cadastrar"
-    sleep 5
     #@welcome = find("[class=welcome]").text
 end
   
 Então('sou redirecionado para o Dashboard') do
    #expect(@welcome).to eql ("Let`s Rock Baby")
    expect(page). to have_css ".dashboard"
-   sleep 5
 end
