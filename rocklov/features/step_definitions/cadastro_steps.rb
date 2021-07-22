@@ -3,9 +3,16 @@ Dado('que acesso a página de cadastro') do
 end
   
 Quando('submeto o meu cadastro completo') do
-    pending # Write code here that turns the phrase above into concrete actions
+    find("#fullName").set "Anderson Oliveira"
+    find("#email").set "anderson.tr@gmail.com"
+    find("#password").set "senha123"
+    click_button "Cadastrar"
+    sleep 5
+    #@welcome = find("[class=welcome]").text
 end
   
 Então('sou redirecionado para o Dashboard') do
-    pending # Write code here that turns the phrase above into concrete actions
+   #expect(@welcome).to eql ("Let`s Rock Baby")
+   expect(page). to have_css ".dashboard"
+   sleep 5
 end
