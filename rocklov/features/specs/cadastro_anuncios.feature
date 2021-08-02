@@ -6,9 +6,10 @@ Funcionalidade: Cadastro de Anúncios
     Para que eu possa disponibilizalos para locação
 
     Cenário: Novo equipamento
-        
-        Dado que eu tenho o seguinte equipamento
-            | img       | fender-sb.jpg |
+        Dado que estou logado com "anderson.teste@gmail.com" e a senha "Senha123"
+            E que acesso o formulário de cadastro de anúncio
+            E que eu tenho o seguinte equipamento
+            | thumb     | fender-sb.jpg |
             | nome      | Fender Strato |
             | categoria | Cordas        |
             | preco     | 200           |
