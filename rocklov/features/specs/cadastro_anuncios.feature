@@ -9,7 +9,7 @@ Funcionalidade: Cadastro de Anúncios
         Dado que estou logado com "anderson.teste@gmail.com" e a senha "Senha123"
             E que acesso o formulário de cadastro de anúncio
             E que eu tenho o seguinte equipamento
-            | thumb     | fender-sb.jpg |
+            | img       | fender-sb.jpg |
             | nome      | Fender Strato |
             | categoria | Cordas        |
             | preco     | 200           |
