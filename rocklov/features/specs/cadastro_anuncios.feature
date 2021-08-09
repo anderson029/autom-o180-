@@ -4,7 +4,7 @@ Funcionalidade: Cadastro de Anúncios
     Sendo usuário cadastrado na rocklov que possui equipamentos músicais
     Quero cadastrar meus equipamentos
     Para que eu possa disponibilizalos para locação
-
+    
     Cenário: Novo equipamento
         Dado que estou logado com "anderson.teste@gmail.com" e a senha "Senha123"
             E que acesso o formulário de cadastro de anúncio

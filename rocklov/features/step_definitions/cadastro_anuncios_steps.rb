@@ -21,7 +21,6 @@ end
 Quando('submeto o cadastro desse item') do
 
     img = Dir.pwd + "/features/support/fixtures/images/" + @anuncio[:img]
-    sleep 10
     find("#thumbnail input[type=file]", visible: false).set img
     find("input[placeholder$=equipamento]").set @anuncio[:nome]
     find("#category").find("option", text: @anuncio[:categoria]).select_option
