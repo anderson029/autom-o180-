@@ -5,13 +5,13 @@ Funcionalidade: Login
     Quero acessar o sistema da Rocklov
     Para que eu possa anunciar meus equipamentos musicais
 
-    
+    @login
     Cenario: Login do usuário
 
         Dado que acesso a página principal
         Quando submeto minhas credenciais com "anderson.teste@gmail.com" e "Senha123"
         Então sou redirecionado para o Dashboard
-    @temp
+
     Esquema do Cenário: Tentar Logar
         Dado que acesso a página principal
         Quando submeto minhas credenciais com "<email_input>" e "<senha_input>"
