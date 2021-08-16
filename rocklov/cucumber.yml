@@ -1,0 +1,11 @@
+---
+  #gerando relatório do cucumber na nuvem
+  # - quiet = desativar relatório 
+  #-f progress = rodar no formato progress
+  #-f pretty = formato padrão do cucumber
+  #-f html -o = criar reports na pasta direcionada em arquivo html
+ default: --publish-quiet -p html -p bdd
+ bdd: -f pretty
+ dots: -f progress
+ html: -f html -o logs/reports.html
+ #allure: --format AllureCucumber::CucumberFormatter --out=logs
