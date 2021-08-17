@@ -11,9 +11,3 @@ Capybara.configure do |config|
   config.app_host = "http://rocklov-web:3000"
   config.default_max_wait_time = 10
 end
-=beginopcional allure para gerar reports
-AllureCucumber.configure do |config|
-  config.results_directory = "logs/"
-  config.clean_results_directory = true
-end
-=end

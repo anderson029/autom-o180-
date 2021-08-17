@@ -11,3 +11,9 @@ Before do
   #defindo o tamanho da tela padronizado
   #page.current_window.resize_to(1440, 900)
 end
+
+After do |scenario|
+  nome_cenario = scenario.name.gsub(" ", "_").downcase
+  log nome_cenario
+  page.save_screenshot("logs/screenshot_evidency/#{nome_cenario}.png")
+end
