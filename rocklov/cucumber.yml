@@ -8,4 +8,3 @@
  bdd: -f pretty
  dots: -f progress
  html: -f html -o logs/reports.html
- #allure: --format AllureCucumber::CucumberFormatter --out=logs
