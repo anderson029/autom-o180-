@@ -81,6 +81,7 @@ GEM
     nokogiri (1.12.3-x64-mingw32)
       racc (~> 1.4)
     oj (3.13.1)
+    os (1.1.1)
     protobuf-cucumber (3.10.8)
       activesupport (>= 3.2)
       middleware
@@ -133,6 +134,7 @@ DEPENDENCIES
   cucumber (= 5.2)
   faker (= 2.18)
   mongo (= 2.13.1)
+  os
   rspec (= 3.10)
   selenium-webdriver (= 3.142)
 

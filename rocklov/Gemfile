@@ -7,3 +7,4 @@ gem "selenium-webdriver", "3.142"
 gem "rspec", "3.10"
 gem "faker", "2.18"
 gem "mongo", "2.13.1"
+gem 'os'

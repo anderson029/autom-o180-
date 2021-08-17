@@ -26,6 +26,7 @@ class EquiposPage
 
   def upload(file_name)
     img = Dir.pwd + "/features/support/fixtures/images/" + file_name
+    img = img.tr("/", "\\") if OS.windows? #para sanar o problema de upload das imagens no firefox
     find("#thumbnail input[type=file]", visible: false).set img
   end
 end

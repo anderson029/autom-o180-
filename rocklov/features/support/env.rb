@@ -4,11 +4,12 @@ require "capybara"
 require "capybara/cucumber"
 require "faker"
 require "allure-cucumber"
+require "os"
 
 CONFIG = YAML.load_file(File.join(Dir.pwd, "features/support/config/#{ENV["CONFIG"]}"))
 #ruby trabalha com  blocos então aqui vamos confugurar o capybara
 Capybara.configure do |config|
-  config.default_driver = :selenium_chrome
+  config.default_driver = :selenium_chrome #selenium roda padrão no firefox
   config.app_host = CONFIG["url"]
   config.default_max_wait_time = 10
 end
