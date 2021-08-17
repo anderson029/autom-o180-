@@ -4,8 +4,13 @@
   #-f progress = rodar no formato progress
   #-f pretty = formato padrão do cucumber
   #-f html -o = criar reports na pasta direcionada em arquivo html
- default: --publish-quiet -p html -p bdd -p local
+ default: --publish-quiet -p html -p bdd -p local -p chrome
  bdd: -f pretty
  dots: -f progress
  html: -f html -o logs/reports.html
  local: CONFIG=local.yml
+ #variaveis de ambiente para rodar multibrowser
+ firefox: BROWSER=firefox
+ fire_headless: BROWSER=fire_headless
+ chrome: BROWSER=chrome
+ chrome_headless: BROWSER=chrome_headless
