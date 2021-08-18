@@ -8,7 +8,7 @@ Funcionalidade: Cadastro de Anúncios
     Contexto: Login
         * Login com "anderson.teste@gmail.com" e a senha "Senha123"
 
-    @cadastro_equipo
+    @cadastroequipo
     Cenário: Novo equipamento
         Dado que acesso o formulário de cadastro de anúncio
             E que eu tenho o seguinte equipamento
