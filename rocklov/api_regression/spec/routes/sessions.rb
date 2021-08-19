@@ -4,11 +4,7 @@ class Sessions
   include HTTParty
   base_uri "http://rocklov-api:3333"
 
-  def login(email, senha)
-    payload = {
-      "email": email,
-      "password": senha,
-    }
+  def login(payload)
     @headers = {
       "Content-Type" => "application/json",
     }
