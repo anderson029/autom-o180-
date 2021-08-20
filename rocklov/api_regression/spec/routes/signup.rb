@@ -1,10 +1,7 @@
-require "httparty"
+require_relative "base_api"
 
-class Signup
-  include HTTParty
-  base_uri "http://rocklov-api:3333"
-
+class Signup < BaseApi
   def create(payload)
-    return self.class.post("/signup", body: payload.to_json, headers: { "Content-Type": "application/json" })
+    return self.class.post("/signup", body: payload.to_json, headers: @headers)
   end
 end
