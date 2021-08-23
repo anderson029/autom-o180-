@@ -1,7 +1,3 @@
-require_relative "routes/equipos"
-require_relative "routes/sessions"
-require_relative "libs/mongo"
-
 describe "Post/equipos" do
   context "novo equipo" do
     #armazeando o token do usuario para passar no header

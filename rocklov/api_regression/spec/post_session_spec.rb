@@ -1,6 +1,3 @@
-require_relative "routes/sessions"
-#require_relative "helpers"
-
 describe "POST/sessions" do
   context "Login com sucesso" do
     before(:all) do #before all roda uma única vez sem all roda toda vez antes de cada IT
