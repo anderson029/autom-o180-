@@ -1,6 +1,3 @@
-require_relative "routes/signup"
-require_relative "libs/mongo"
-
 describe "Post/Signup" do
   context "Cadastro com sucesso" do
     before(:all) do
