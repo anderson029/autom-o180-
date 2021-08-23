@@ -11,7 +11,7 @@ describe "Post/equipos" do
       @user_id = result.parsed_response["_id"]
     end
     before(:all) do
-      thumbnail = File.open(File.join(Dir.pwd, "spec/fixtures/images", "kramer.jpg"))
+      thumbnail = Helpers::get_thumb("kramer.jpg")
       payload = {
         "thumbnail": thumbnail,
         "name": "Guitarra",
@@ -24,6 +24,28 @@ describe "Post/equipos" do
 
     it "deve retornar 200" do
       expect(@result.code).to eql 200
+    end
+  end
+
+  context "não autorizado" do
+    #armazeando o token do usuario para passar no header
+    before(:all) do
+      payload = {
+        "thumbnail": Helpers::get_thumb("sanfona.jpg"),
+        "name": "Guitarra",
+        "category": "Cordas",
+        "price": 399,
+      }
+
+      @result = Equipos.new.create(payload, nil)
+    end
+
+    it "deve retornar 401" do
+      expect(@result.code).to eql 401
+    end
+
+    it "deve retornar a mensagem de erro" do
+      expect(@result.parsed_response["error"]).to eql "Unauthorized"
     end
   end
 end
