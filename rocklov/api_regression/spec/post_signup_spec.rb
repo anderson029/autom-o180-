@@ -6,12 +6,11 @@ describe "Post/Signup" do
     before(:all) do
       @payload = {
         "name": "Anderson",
-        "email": "anderson@teeeste.com",
+        "email": "anderson@teste.com",
         "password": "Senha123",
       }
       MongoDB.new.remove_user(@payload[:email])
       @result = Signup.new.create(@payload)
-      puts @result
     end
 
     it "Valindado status code" do
@@ -27,7 +26,7 @@ describe "Post/Signup" do
     before(:all) do
       #dado que eu tenho um novo usuario
       @payload = {
-        "name": "Sou dupliciado",
+        "name": "Sou duplicado",
         "email": "duplicado@ig.com",
         "password": "Senha123",
       }
