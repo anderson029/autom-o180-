@@ -16,7 +16,6 @@ describe "POST/sessions" do
 
     it "valida nome" do
       expect(@result["name"]).to eql "Anderson"
-      #puts @result["name"]
     end
   end
 
