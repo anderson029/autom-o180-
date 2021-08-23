@@ -1,5 +1,6 @@
 require_relative "routes/equipos"
 require_relative "routes/sessions"
+require_relative "libs/mongo"
 
 describe "Post/equipos" do
   context "novo equipo" do
@@ -21,8 +22,8 @@ describe "Post/equipos" do
         "category": "Cordas",
         "price": 399,
       }
+      MongoDB.new.remove_equipo(payload[:name], @user_id)
       @result = Equipos.new.create(payload, @user_id)
-      puts @result
     end
 
     it "deve retornar 200" do
