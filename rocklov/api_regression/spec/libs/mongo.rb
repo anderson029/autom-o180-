@@ -23,4 +23,9 @@ class MongoDB
     obj_id = BSON::ObjectId.from_string(user_id) #covertendo para object_id do mongo
     @equipos.delete_many({ name: nome, user: obj_id })
   end
+
+  #gerando id aleatorio para fazer consulta no banco por equipamento invalido
+  def get_mongo_id
+    return BSON::ObjectId.new
+  end
 end
