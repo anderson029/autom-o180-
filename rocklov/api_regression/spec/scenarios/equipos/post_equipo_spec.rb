@@ -28,7 +28,7 @@ describe "Post/equipos" do
   end
 
   context "não autorizado" do
-    #armazeando o token do usuario para passar no header
+    #armazenando o token do usuario para passar no header
     before(:all) do
       payload = {
         "thumbnail": Helpers::get_thumb("sanfona.jpg"),
