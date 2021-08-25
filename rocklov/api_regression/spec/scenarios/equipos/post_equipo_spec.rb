@@ -11,9 +11,8 @@ describe "Post/equipos" do
       @user_id = result.parsed_response["_id"]
     end
     before(:all) do
-      thumbnail = Helpers::get_thumb("kramer.jpg")
       payload = {
-        "thumbnail": thumbnail,
+        "thumbnail": Helpers::get_thumb("kramer.jpg"),
         "name": "Guitarra",
         "category": "Cordas",
         "price": 399,
