@@ -1,20 +1,20 @@
 describe "POST /equipo/ {equipo_id}/bookings" do
   before(:all) do
     @joy = {
-      "name": "Joy Miller",
-      "email": "joy@teste.com",
+      "email": "joy@uol.com",
       "password": "Senha123",
     }
     MongoDB.new.remove_user(@joy[:email])
-    result = Signup.new.create(@joy)
+    result = Sessions.new.login(@joy)
     @joy_id = result.parsed_response["_id"]
+    puts result
   end
 
   context "solicitando a fender strato para locação" do
-    #dado que "Adam" tem uma fender strato para locação
+    #dado que "Messi" tem uma fender strato para locação
     before(:all) do
       payload = {
-        "email": "adam@bol.com",
+        "email": "messi@bol.com",
         "password": "Senha123",
       }
 
@@ -33,7 +33,7 @@ describe "POST /equipo/ {equipo_id}/bookings" do
       #quando "joy miller" faz uma solicitação para alugar o equipamento
       @result = Equipos.new.booking(@fender_id, @joy_id)
     end
-    it "deve retonrar o status 200" do
+    it "deve retornar o status 200" do
       expect(@result.code).to eql 200
     end
   end

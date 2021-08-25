@@ -4,10 +4,20 @@ Mongo::Logger.logger = Logger.new("./logs/mongo.log")
 
 #Acessando banco de dados
 class MongoDB
+  attr_accessor :client, :users, :equipos
+
   def initialize
-    client = Mongo::Client.new("mongodb://rocklov-db:27017/rocklov")
+    @client = Mongo::Client.new("mongodb://rocklov-db:27017/rocklov")
     @users = client[:users]
     @equipos = client[:equipos]
+  end
+
+  def drop_danger #metodo para excluir todos os usuário no banco
+    @client.database.drop
+  end
+
+  def insert_users(docs) # metodo para inserir toda massa de dados do arquivo helpers
+    @users.insert_many(docs)
   end
 
   def remove_user(email)

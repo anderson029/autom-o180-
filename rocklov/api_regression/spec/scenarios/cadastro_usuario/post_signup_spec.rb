@@ -23,7 +23,7 @@ describe "Post/Signup" do
     before(:all) do
       #dado que eu tenho um novo usuario
       @payload = {
-        "name": "Sou duplicado",
+        "name": "Amora",
         "email": "duplicado@ig.com",
         "password": "Senha123",
       }

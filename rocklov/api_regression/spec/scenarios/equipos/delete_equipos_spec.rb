@@ -2,7 +2,7 @@
 describe "Delete/{equipos id}" do
   before(:all) do
     payload = {
-      "email": "adam@bol.com",
+      "email": "gustavo@bol.com",
       "password": "Senha123",
     }
 
