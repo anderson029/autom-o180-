@@ -13,7 +13,7 @@ describe "POST/sessions" do
     end
 
     it "valida nome" do
-      expect(@result["name"]).to eql "Anderson"
+      expect(@result["name"]).to eql "Adam Bol"
     end
   end
 

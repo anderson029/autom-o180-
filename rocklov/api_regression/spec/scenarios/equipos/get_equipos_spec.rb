@@ -58,7 +58,7 @@ describe "GET/equipos" do
 
   before(:all) do
     payload = {
-      "email": "varios@equipos.com",
+      "email": "tom@hotmail.com",
       "password": "Senha123",
     }
 
