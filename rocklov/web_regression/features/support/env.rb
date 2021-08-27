@@ -18,7 +18,7 @@ when "chrome"
 when "chrome_headless"
   @driver = :selenium_chrome_headless
 else
-  raise "Navegador Incorreto, selecione um navegador valido" #raise estoura uma excessão e não exuta mais o código, log e puts só apresenta nos steps
+  raise "Navegador Incorreto, selecione um navegador valido" #raise estoura uma excessão e não executa mais o códig. Não podemos utilziar comandos log e puts pois só apresenta nos steps
 end
 puts "Ambiente escolhido #{@driver}"
 
