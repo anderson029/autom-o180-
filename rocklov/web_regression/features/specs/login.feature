@@ -9,7 +9,7 @@ Funcionalidade: Login
     Cenario: Login do usuário
 
         Dado que acesso a página principal
-        Quando submeto minhas credenciais com "anderson.teste@gmail.com" e "Senha123"
+        Quando submeto minhas credenciais com "roberto.teste@gmail.com" e "Senha123"
         Então sou redirecionado para o Dashboard
 
     Esquema do Cenário: Tentar Logar
