@@ -16,6 +16,7 @@ task :local do
   users = [
     { name: "Anderson", email: "anderson.teste@gmail.com", password: to_md5("Senha123") },
     { name: "Roberto", email: "roberto.teste@gmail.com", password: to_md5("Senha123") },
+    { name: "Jurema", email: "jurema@gmail.com", password: to_md5("Senha123") },
   ]
 
   MongoDB.new.drop_danger

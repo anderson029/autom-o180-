@@ -5,6 +5,10 @@ Funcionalidade: Remover Anúncios
     Quero poder remover esse anúncio
     Para que eu possa manter o meu dashboard atualziado
 
+    Contexto: Login
+        * Login com "jurema@gmail.com" e a senha "Senha123"
+
+    @temp
     Cenário: remover anúcio
 
         Dado que eu tenha um anúncio indesejado
@@ -20,8 +24,8 @@ Funcionalidade: Remover Anúncios
         Dado que eu tenha um anúncio indesejado
             | thumb      | conga.jpg |
             | nome       | Conga     |
-            | castegoria | Outros        |
-            | preco      | 50             |
+            | castegoria | Outros    |
+            | preco      | 50        |
         Quando eu solicito a exclusão desse item
-           Mas não confirmo a exclusão
+            Mas não confirmo a exclusão
         Então não devo ver esse item no meu Dashboard
