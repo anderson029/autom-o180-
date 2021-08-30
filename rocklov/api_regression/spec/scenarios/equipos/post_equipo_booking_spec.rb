@@ -4,7 +4,7 @@ describe "POST /equipo/ {equipo_id}/bookings" do
       "email": "joy@uol.com",
       "password": "Senha123",
     }
-    MongoDB.new.remove_user(@joy[:email])
+    #MongoDB.new.remove_user(@joy[:email])
     result = Sessions.new.login(@joy)
     @joy_id = result.parsed_response["_id"]
     puts result

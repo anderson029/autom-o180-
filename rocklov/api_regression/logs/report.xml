@@ -1,51 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="rspec" tests="34" skipped="0" failures="1" errors="0" time="1.431325" timestamp="2021-08-25T15:13:45-03:00" hostname="LAPTOP-IPE08FQ9">
+<testsuite name="rspec" tests="34" skipped="0" failures="0" errors="0" time="1.816735" timestamp="2021-08-30T09:20:28-03:00" hostname="LAPTOP-IPE08FQ9">
 <properties>
-<property name="seed" value="40153"/>
+<property name="seed" value="57873"/>
 </properties>
-<testcase classname="spec.scenarios.cadastro_usuario.post_signup_spec" name="Post/Signup Cadastro com sucesso Valindado status code" file="./spec/scenarios/cadastro_usuario/post_signup_spec.rb" time="0.002318"></testcase>
-<testcase classname="spec.scenarios.cadastro_usuario.post_signup_spec" name="Post/Signup Cadastro com sucesso validando nome" file="./spec/scenarios/cadastro_usuario/post_signup_spec.rb" time="0.000200"></testcase>
-<testcase classname="spec.scenarios.cadastro_usuario.post_signup_spec" name="Post/Signup usuario duplicado deve retornar 409" file="./spec/scenarios/cadastro_usuario/post_signup_spec.rb" time="0.000139"></testcase>
-<testcase classname="spec.scenarios.cadastro_usuario.post_signup_spec" name="Post/Signup usuario duplicado validando mensagem de erro" file="./spec/scenarios/cadastro_usuario/post_signup_spec.rb" time="0.000136"></testcase>
-<testcase classname="spec.scenarios.cadastro_usuario.post_signup_spec" name="Post/Signup nome em branco Deve retornar 412" file="./spec/scenarios/cadastro_usuario/post_signup_spec.rb" time="0.000140"></testcase>
-<testcase classname="spec.scenarios.cadastro_usuario.post_signup_spec" name="Post/Signup nome em branco deve retornar a mensagem de erro" file="./spec/scenarios/cadastro_usuario/post_signup_spec.rb" time="0.000208"></testcase>
-<testcase classname="spec.scenarios.cadastro_usuario.post_signup_spec" name="Post/Signup email em branco Deve retornar 412" file="./spec/scenarios/cadastro_usuario/post_signup_spec.rb" time="0.000125"></testcase>
-<testcase classname="spec.scenarios.cadastro_usuario.post_signup_spec" name="Post/Signup email em branco deve retornar a mensagem de erro" file="./spec/scenarios/cadastro_usuario/post_signup_spec.rb" time="0.000137"></testcase>
-<testcase classname="spec.scenarios.cadastro_usuario.post_signup_spec" name="Post/Signup senha em branco Deve retornar 412" file="./spec/scenarios/cadastro_usuario/post_signup_spec.rb" time="0.000117"></testcase>
-<testcase classname="spec.scenarios.cadastro_usuario.post_signup_spec" name="Post/Signup senha em branco deve retornar a mensagem de erro" file="./spec/scenarios/cadastro_usuario/post_signup_spec.rb" time="0.000165"></testcase>
-<testcase classname="spec.scenarios.equipos.delete_equipos_spec" name="Delete/{equipos id} obter um unico equipamento deve retornar 204" file="./spec/scenarios/equipos/delete_equipos_spec.rb" time="0.000187"></testcase>
-<testcase classname="spec.scenarios.equipos.delete_equipos_spec" name="Delete/{equipos id} equipamento não existe deve retornar o código 204" file="./spec/scenarios/equipos/delete_equipos_spec.rb" time="0.000759"></testcase>
-<testcase classname="spec.scenarios.equipos.get_equipos_spec" name="GET /equipos/{equipos id} obter um unico equipamento deve retornar 200" file="./spec/scenarios/equipos/get_equipos_spec.rb" time="0.000152"></testcase>
-<testcase classname="spec.scenarios.equipos.get_equipos_spec" name="GET /equipos/{equipos id} obter um unico equipamento validar o nome do equipamento" file="./spec/scenarios/equipos/get_equipos_spec.rb" time="0.004859"></testcase>
-<testcase classname="spec.scenarios.equipos.get_equipos_spec" name="GET /equipos/{equipos id} obter um unico equipamento A categoia deve ser teclas" file="./spec/scenarios/equipos/get_equipos_spec.rb" time="0.000213"></testcase>
-<testcase classname="spec.scenarios.equipos.get_equipos_spec" name="GET /equipos/{equipos id} equipamento não existe deve retornar o código 404" file="./spec/scenarios/equipos/get_equipos_spec.rb" time="0.000119"></testcase>
-<testcase classname="spec.scenarios.equipos.get_equipos_spec" name="GET/equipos obter uma lista de equipamentos retornar o código 200" file="./spec/scenarios/equipos/get_equipos_spec.rb" time="0.000360"></testcase>
-<testcase classname="spec.scenarios.equipos.get_equipos_spec" name="GET/equipos obter uma lista de equipamentos retornar uma lista" file="./spec/scenarios/equipos/get_equipos_spec.rb" time="0.011464"></testcase>
-<testcase classname="spec.scenarios.equipos.post_equipo_booking_spec" name="POST /equipo/ {equipo_id}/bookings solicitando a fender strato para locação deve retornar o status 200" file="./spec/scenarios/equipos/post_equipo_booking_spec.rb" time="0.031035"><failure message="
-expected: 200
-     got: 401
-
-(compared using eql?)
-" type="RSpec::Expectations::ExpectationNotMetError">Failure/Error: expect(@result.code).to eql 200
-
-  expected: 200
-       got: 401
-
-  (compared using eql?)
-./spec/scenarios/equipos/post_equipo_booking_spec.rb:37:in `block (3 levels) in &lt;top (required)&gt;&apos;</failure></testcase>
-<testcase classname="spec.scenarios.equipos.post_equipo_spec" name="Post/equipos novo equipo deve retornar 200" file="./spec/scenarios/equipos/post_equipo_spec.rb" time="0.000172"></testcase>
-<testcase classname="spec.scenarios.equipos.post_equipo_spec" name="Post/equipos não autorizado deve retornar 401" file="./spec/scenarios/equipos/post_equipo_spec.rb" time="0.000229"></testcase>
-<testcase classname="spec.scenarios.equipos.post_equipo_spec" name="Post/equipos não autorizado deve retornar a mensagem de erro" file="./spec/scenarios/equipos/post_equipo_spec.rb" time="0.000358"></testcase>
-<testcase classname="spec.scenarios.login.post_session_spec" name="POST/sessions Login com sucesso valida status code" file="./spec/scenarios/login/post_session_spec.rb" time="0.000236"></testcase>
-<testcase classname="spec.scenarios.login.post_session_spec" name="POST/sessions Login com sucesso valida nome" file="./spec/scenarios/login/post_session_spec.rb" time="0.000157"></testcase>
-<testcase classname="spec.scenarios.login.post_session_spec" name="POST/sessions Senha invalida valida status code 401" file="./spec/scenarios/login/post_session_spec.rb" time="0.000133"></testcase>
-<testcase classname="spec.scenarios.login.post_session_spec" name="POST/sessions Senha invalida response text" file="./spec/scenarios/login/post_session_spec.rb" time="0.000226"></testcase>
-<testcase classname="spec.scenarios.login.post_session_spec" name="POST/sessions Email em branco valida status code 412" file="./spec/scenarios/login/post_session_spec.rb" time="0.000123"></testcase>
-<testcase classname="spec.scenarios.login.post_session_spec" name="POST/sessions Email em branco response text" file="./spec/scenarios/login/post_session_spec.rb" time="0.000179"></testcase>
-<testcase classname="spec.scenarios.login.post_session_spec" name="POST/sessions Sem o campo email valida status code 412" file="./spec/scenarios/login/post_session_spec.rb" time="0.000278"></testcase>
-<testcase classname="spec.scenarios.login.post_session_spec" name="POST/sessions Sem o campo email response text" file="./spec/scenarios/login/post_session_spec.rb" time="0.000182"></testcase>
-<testcase classname="spec.scenarios.login.post_session_spec" name="POST/sessions Senha em branco valida status code 412" file="./spec/scenarios/login/post_session_spec.rb" time="0.000126"></testcase>
-<testcase classname="spec.scenarios.login.post_session_spec" name="POST/sessions Senha em branco response text" file="./spec/scenarios/login/post_session_spec.rb" time="0.000138"></testcase>
-<testcase classname="spec.scenarios.login.post_session_spec" name="POST/sessions Sem o campo senha valida status code 412" file="./spec/scenarios/login/post_session_spec.rb" time="0.000363"></testcase>
-<testcase classname="spec.scenarios.login.post_session_spec" name="POST/sessions Sem o campo senha response text" file="./spec/scenarios/login/post_session_spec.rb" time="0.000174"></testcase>
+<testcase classname="spec.scenarios.cadastro_usuario.post_signup_spec" name="Post/Signup Cadastro com sucesso Valindado status code" file="./spec/scenarios/cadastro_usuario/post_signup_spec.rb" time="0.022191"></testcase>
+<testcase classname="spec.scenarios.cadastro_usuario.post_signup_spec" name="Post/Signup Cadastro com sucesso validando nome" file="./spec/scenarios/cadastro_usuario/post_signup_spec.rb" time="0.007987"></testcase>
+<testcase classname="spec.scenarios.cadastro_usuario.post_signup_spec" name="Post/Signup usuario duplicado deve retornar 409" file="./spec/scenarios/cadastro_usuario/post_signup_spec.rb" time="0.000241"></testcase>
+<testcase classname="spec.scenarios.cadastro_usuario.post_signup_spec" name="Post/Signup usuario duplicado validando mensagem de erro" file="./spec/scenarios/cadastro_usuario/post_signup_spec.rb" time="0.000233"></testcase>
+<testcase classname="spec.scenarios.cadastro_usuario.post_signup_spec" name="Post/Signup nome em branco Deve retornar 412" file="./spec/scenarios/cadastro_usuario/post_signup_spec.rb" time="0.000169"></testcase>
+<testcase classname="spec.scenarios.cadastro_usuario.post_signup_spec" name="Post/Signup nome em branco deve retornar a mensagem de erro" file="./spec/scenarios/cadastro_usuario/post_signup_spec.rb" time="0.000262"></testcase>
+<testcase classname="spec.scenarios.cadastro_usuario.post_signup_spec" name="Post/Signup email em branco Deve retornar 412" file="./spec/scenarios/cadastro_usuario/post_signup_spec.rb" time="0.000213"></testcase>
+<testcase classname="spec.scenarios.cadastro_usuario.post_signup_spec" name="Post/Signup email em branco deve retornar a mensagem de erro" file="./spec/scenarios/cadastro_usuario/post_signup_spec.rb" time="0.000197"></testcase>
+<testcase classname="spec.scenarios.cadastro_usuario.post_signup_spec" name="Post/Signup senha em branco Deve retornar 412" file="./spec/scenarios/cadastro_usuario/post_signup_spec.rb" time="0.000199"></testcase>
+<testcase classname="spec.scenarios.cadastro_usuario.post_signup_spec" name="Post/Signup senha em branco deve retornar a mensagem de erro" file="./spec/scenarios/cadastro_usuario/post_signup_spec.rb" time="0.000200"></testcase>
+<testcase classname="spec.scenarios.equipos.delete_equipos_spec" name="Delete/{equipos id} obter um unico equipamento deve retornar 204" file="./spec/scenarios/equipos/delete_equipos_spec.rb" time="0.000238"></testcase>
+<testcase classname="spec.scenarios.equipos.delete_equipos_spec" name="Delete/{equipos id} equipamento não existe deve retornar o código 204" file="./spec/scenarios/equipos/delete_equipos_spec.rb" time="0.000222"></testcase>
+<testcase classname="spec.scenarios.equipos.get_equipos_spec" name="GET /equipos/{equipos id} obter um unico equipamento deve retornar 200" file="./spec/scenarios/equipos/get_equipos_spec.rb" time="0.000199"></testcase>
+<testcase classname="spec.scenarios.equipos.get_equipos_spec" name="GET /equipos/{equipos id} obter um unico equipamento validar o nome do equipamento" file="./spec/scenarios/equipos/get_equipos_spec.rb" time="0.055603"></testcase>
+<testcase classname="spec.scenarios.equipos.get_equipos_spec" name="GET /equipos/{equipos id} obter um unico equipamento A categoia deve ser teclas" file="./spec/scenarios/equipos/get_equipos_spec.rb" time="0.000131"></testcase>
+<testcase classname="spec.scenarios.equipos.get_equipos_spec" name="GET /equipos/{equipos id} equipamento não existe deve retornar o código 404" file="./spec/scenarios/equipos/get_equipos_spec.rb" time="0.000241"></testcase>
+<testcase classname="spec.scenarios.equipos.get_equipos_spec" name="GET/equipos obter uma lista de equipamentos retornar o código 200" file="./spec/scenarios/equipos/get_equipos_spec.rb" time="0.000219"></testcase>
+<testcase classname="spec.scenarios.equipos.get_equipos_spec" name="GET/equipos obter uma lista de equipamentos retornar uma lista" file="./spec/scenarios/equipos/get_equipos_spec.rb" time="0.020376"></testcase>
+<testcase classname="spec.scenarios.equipos.post_equipo_booking_spec" name="POST /equipo/ {equipo_id}/bookings solicitando a fender strato para locação deve retornar o status 200" file="./spec/scenarios/equipos/post_equipo_booking_spec.rb" time="0.000253"></testcase>
+<testcase classname="spec.scenarios.equipos.post_equipo_spec" name="Post/equipos novo equipo deve retornar 200" file="./spec/scenarios/equipos/post_equipo_spec.rb" time="0.000280"></testcase>
+<testcase classname="spec.scenarios.equipos.post_equipo_spec" name="Post/equipos não autorizado deve retornar 401" file="./spec/scenarios/equipos/post_equipo_spec.rb" time="0.000280"></testcase>
+<testcase classname="spec.scenarios.equipos.post_equipo_spec" name="Post/equipos não autorizado deve retornar a mensagem de erro" file="./spec/scenarios/equipos/post_equipo_spec.rb" time="0.000257"></testcase>
+<testcase classname="spec.scenarios.login.post_session_spec" name="POST/sessions Login com sucesso valida status code" file="./spec/scenarios/login/post_session_spec.rb" time="0.000268"></testcase>
+<testcase classname="spec.scenarios.login.post_session_spec" name="POST/sessions Login com sucesso valida nome" file="./spec/scenarios/login/post_session_spec.rb" time="0.000342"></testcase>
+<testcase classname="spec.scenarios.login.post_session_spec" name="POST/sessions Senha invalida valida status code 401" file="./spec/scenarios/login/post_session_spec.rb" time="0.000248"></testcase>
+<testcase classname="spec.scenarios.login.post_session_spec" name="POST/sessions Senha invalida response text" file="./spec/scenarios/login/post_session_spec.rb" time="0.000327"></testcase>
+<testcase classname="spec.scenarios.login.post_session_spec" name="POST/sessions Email em branco valida status code 412" file="./spec/scenarios/login/post_session_spec.rb" time="0.000279"></testcase>
+<testcase classname="spec.scenarios.login.post_session_spec" name="POST/sessions Email em branco response text" file="./spec/scenarios/login/post_session_spec.rb" time="0.000246"></testcase>
+<testcase classname="spec.scenarios.login.post_session_spec" name="POST/sessions Sem o campo email valida status code 412" file="./spec/scenarios/login/post_session_spec.rb" time="0.000219"></testcase>
+<testcase classname="spec.scenarios.login.post_session_spec" name="POST/sessions Sem o campo email response text" file="./spec/scenarios/login/post_session_spec.rb" time="0.000230"></testcase>
+<testcase classname="spec.scenarios.login.post_session_spec" name="POST/sessions Senha em branco valida status code 412" file="./spec/scenarios/login/post_session_spec.rb" time="0.000143"></testcase>
+<testcase classname="spec.scenarios.login.post_session_spec" name="POST/sessions Senha em branco response text" file="./spec/scenarios/login/post_session_spec.rb" time="0.000293"></testcase>
+<testcase classname="spec.scenarios.login.post_session_spec" name="POST/sessions Sem o campo senha valida status code 412" file="./spec/scenarios/login/post_session_spec.rb" time="0.000194"></testcase>
+<testcase classname="spec.scenarios.login.post_session_spec" name="POST/sessions Sem o campo senha response text" file="./spec/scenarios/login/post_session_spec.rb" time="0.000308"></testcase>
 </testsuite>
