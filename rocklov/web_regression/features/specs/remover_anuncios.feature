@@ -9,7 +9,7 @@ Funcionalidade: Remover Anúncios
         * Login com "jurema@gmail.com" e a senha "Senha123"
 
     @temp
-    Cenário: remover anúcio
+    Cenário: remover anúncio
 
         Dado que eu tenha um anúncio indesejado
             | thumb      | telecaster.jpg |
