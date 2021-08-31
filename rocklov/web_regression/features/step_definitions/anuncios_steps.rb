@@ -38,18 +38,21 @@ Dado("que eu tenha um anúncio indesejado") do |table|
   user_id = page.execute_script(" return localStorage.getItem('user')") # extraindo id o usuário atráves do Javascript
   tabela = table.rows_hash
   thumbnail = File.open(File.join(Dir.pwd, "features/support/fixtures/images", tabela[:thumb]))
-  equipo = {
+  @equipo = {
     "thumbnail": thumbnail,
     "name": tabela[:nome],
     "category": tabela[:categoria],
     "price": tabela[:preco],
   }
 
-  EquiposService.new.create(equipo, user_id)
+  EquiposService.new.create(@equipo, user_id)
+
+  visit current_path # acessar a página e dar refresh na prória página antes da exclusão
 end
 
 Quando("eu solicito a exclusão desse item") do
-  pending # Write code here that turns the phrase above into concrete actions
+  equipo = find(".equipo-list li", text: @equipo[:name])
+  equipo.find(".delete-icon").click
 end
 
 Quando("confirmo a exclusão") do
