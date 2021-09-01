@@ -47,18 +47,20 @@ Dado("que eu tenha um anúncio indesejado") do |table|
 
   EquiposService.new.create(@equipo, user_id)
 
-  visit current_path # acessar a página e dar refresh na prória página antes da exclusão
+  visit current_path # refresh na página atual
 end
 
 Quando("eu solicito a exclusão desse item") do
-  equipo = find(".equipo-list li", text: @equipo[:name])
-  equipo.find(".delete-icon").click
+  @dash_page.request_remove(@equipo[:name])
+  sleep 1 #think time
 end
 
 Quando("confirmo a exclusão") do
-  pending # Write code here that turns the phrase above into concrete actions
+  @dash_page.confirm_remove
 end
 
 Então("não devo ver esse item no meu Dashboard") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(
+    @dash_page.has_no_equipo? (@equipo[:name])
+  ).to be true
 end
