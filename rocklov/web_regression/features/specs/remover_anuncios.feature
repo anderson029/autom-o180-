@@ -19,7 +19,7 @@ Funcionalidade: Remover Anúncios
         Quando eu solicito a exclusão desse item
             E confirmo a exclusão
         Então não devo ver esse item no meu Dashboard
-@temp
+
     Cenário: Desistir da exclusão
         Dado que eu tenha um anúncio indesejado
             | thumb     | conga.jpg |
