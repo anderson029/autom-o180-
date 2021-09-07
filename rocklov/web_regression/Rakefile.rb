@@ -17,6 +17,8 @@ task :local do
     { name: "Anderson", email: "anderson.teste@gmail.com", password: to_md5("Senha123") },
     { name: "Roberto", email: "roberto.teste@gmail.com", password: to_md5("Senha123") },
     { name: "Jurema", email: "jurema@gmail.com", password: to_md5("Senha123") },
+    { name: "João Anunciante", email: "joao@anunciante.com", password: to_md5("pwd123") },
+    { name: "Maria locataria", email: "maria@locataria.com", password: to_md5("pwd123") },
   ]
 
   MongoDB.new.drop_danger
