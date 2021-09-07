@@ -19,7 +19,12 @@ class DashPage
   end
 
   def confirm_remove
+    #ou pode usar o click_button"Sim"
     click_on "Sim"
+  end
+
+  def cancel_removal
+    click_on "Não"
   end
 
   def has_no_equipo?(name)
