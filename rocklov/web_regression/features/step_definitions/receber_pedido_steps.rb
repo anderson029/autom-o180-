@@ -28,13 +28,21 @@ end
 Quando("{string} e {string} solicita a locação desse equipo") do |email, password|
   user_id = SessionsService.new.get_user_id(email, password)
   EquiposService.new.booking(@equipo_id, user_id)
-  sleep 10
 end
 
 Então("devo ver a seguinte mensagem:") do |doc_string|
-  pending # Write code here that turns the phrase above into concrete actions
+  expect_message = doc_string.gsub("DATA_ATUAL", Time.now.strftime("%d/%m/%y"))
+ 
+  expect( @dash_page.order).to have_text expect_message
 end
 
-Então("devo ver os links: {string} e {string} no pedido") do |string, string2|
-  pending # Write code here that turns the phrase above into concrete actions
+Então("devo ver os links: {string} e {string} no pedido") do |button_accept, button_reject|
+ #sem page objects
+  #expect(page).to have_selector ".notifications button", text: button_accept
+  #expect(page).to have_selector ".notifications button", text: button_reject
+
+#implementando page objects
+  expect(@dash_page.order_actions(button_accept)),to be true
+  expect(@dash_page.order_actions(button_reject)),to be true
+
 end

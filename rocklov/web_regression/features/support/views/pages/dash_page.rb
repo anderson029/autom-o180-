@@ -31,4 +31,12 @@ class DashPage
     #has_to_css - retornar verdadeiro ou falso
     return page.has_no_css?(".equipo-list li", text: name)
   end
+
+  def order
+    return find(".notifications p")
+  end
+
+  def order_actions(name)
+    return page.has_css?(".notifications button", text: name)
+  end
 end
