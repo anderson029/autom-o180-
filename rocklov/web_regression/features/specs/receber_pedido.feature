@@ -4,7 +4,7 @@ Funcionalidade: Receber pedido de locação
     Sendo um anúnciante que possui equipamentos cadastrados
     Desejo receber pedidos de locação
     Para que eu possa decidir se quero aprova-los ou rejeita-los
-@temp
+@temp_teste
     Cenario: Receber pedido
 
         Dado que meu perfil de anunciante é "joao@anunciante.com" e "pwd123"
